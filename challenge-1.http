@@ -49,19 +49,7 @@ Content-Type: application/json
   }
 }
 
-### 2 - Pessoas com mais de 5 anos de experiência disponíveis para trabalhar imediatamente
-GET {{elasticurl}}/candidates/_search
-Content-Type: application/json
-
-{
-  "query": {
-    "match_phrase": {
-      "summary": "software engineer"
-    }
-  }
-}
-
-### 3 - Encontrar candidatas cujo o título é “Data Analyst”
+### 3 - Pessoas que tenham a frase exata “software engineer” no sumário
 GET {{elasticurl}}/candidates/_search
 Content-Type: application/json
 
